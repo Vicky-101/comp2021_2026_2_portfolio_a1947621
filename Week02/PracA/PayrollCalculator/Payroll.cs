@@ -3,30 +3,69 @@ using System;
 public class Payroll
 {
     private double hours;
+    public double Hours
+{
+    get
+    {
+        return hours;
+    }
+    set
+    {
+        if (value < 0)
+        {
+            throw new ArgumentException(
+                "Hours cannot be negative."
+            );
+        }
+
+        hours = value;
+    }
+}
     private decimal rate;
+    public decimal Rate
+{
+    get
+    {
+        return rate;
+    }
+    set
+    {
+        if (value < 0)
+        {
+            throw new ArgumentException(
+                "Rate cannot be negative."
+            );
+        }
+
+        rate = value;
+    }
+}
     private decimal taxRate;
+    public decimal TaxRate
+{
+    get
+    {
+        return taxRate;
+    }
+    set
+    {
+        if (value < 0)
+        {
+            throw new ArgumentException(
+                "Tax rate cannot be negative."
+            );
+        }
+
+        taxRate = value;
+    }
+}
 
     public Payroll(double hours, decimal rate, decimal taxRate)
-    {
-        if (hours < 0)
-        {
-            throw new ArgumentException("Hours cannot be negative.");
-        }
-
-        if (rate < 0)
-        {
-            throw new ArgumentException("Rate cannot be negative.");
-        }
-
-        if (taxRate < 0)
-        {
-            throw new ArgumentException("Tax rate cannot be negative.");
-        }
-
-        this.hours = hours;
-        this.rate = rate;
-        this.taxRate = taxRate;
-    }
+{
+    Hours = hours;
+    Rate = rate;
+    TaxRate = taxRate;
+}
        public decimal CalculateNetPay()
     {
         decimal grossPay = (decimal)hours * rate;
@@ -37,13 +76,6 @@ public class Payroll
     }
         public void ChangeTaxRate(decimal newTaxRate)
     {
-        if (newTaxRate < 0)
-        {
-            throw new ArgumentException(
-                "Tax rate cannot be negative."
-            );
-        }
-
-        taxRate = newTaxRate;
+        TaxRate = newTaxRate;
     }
 }
