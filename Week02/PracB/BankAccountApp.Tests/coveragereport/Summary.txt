@@ -1,0 +1,24 @@
+Summary
+  Generated on: 12/8/2026 - 下午12:19:34
+  Coverage date: 12/8/2026 - 下午12:18:18
+  Parser: Cobertura
+  Assemblies: 1
+  Classes: 2
+  Files: 2
+  Line coverage: 66.6%
+  Covered lines: 22
+  Uncovered lines: 11
+  Coverable lines: 33
+  Total lines: 54
+  Branch coverage: 100% (2 of 2)
+  Covered branches: 2
+  Total branches: 2
+  Method coverage: 87.5% (7 of 8)
+  Full method coverage: 87.5% (7 of 8)
+  Covered methods: 7
+  Fully covered methods: 7
+  Total methods: 8
+
+BankAccountApp     66.6%
+  BankAccount       100%
+  Program             0%
