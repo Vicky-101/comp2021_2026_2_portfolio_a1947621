@@ -14,6 +14,14 @@ public class BankAccount
     {
         Balance += amount;
     }
+    public void Deposit(int amount)
+    {
+        Balance+=amount;
+    }
+    public void Deposit(double amount)
+    {
+        Balance += (decimal) amount;
+    }
     public void Withdraw(decimal amount)
     {
         if (amount > Balance)
