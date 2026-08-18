@@ -1,0 +1,6 @@
+
+Inheritance reduces duplicated code because SavingsAccount and CheckingAccount can reuse common properties and methods from BankAccount, such as Owner, Balance, Deposit(), and Withdraw(). 
+This means I do not need to write the same code again for each account type.
+SavingsAccount has the additional responsibility of storing an interest rate and applying interest to the balance using ApplyInterest().
+CheckingAccount has the additional responsibility of storing a transaction fee and deducting the fee whenever a withdrawal is made.
+I also learned that virtual methods allow a base class method to be overridden by subclasses. This allows SavingsAccount and CheckingAccount to provide their own versions of DisplayAccountInfo().
