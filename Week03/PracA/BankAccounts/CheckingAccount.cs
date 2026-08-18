@@ -12,4 +12,9 @@ public class CheckingAccount : BankAccount
     {
         base.Withdraw(amount + TransactionFee);
     }
+    public override void DisplayAccountInfo()
+{
+    base.DisplayAccountInfo();
+    Console.WriteLine($"Transaction fee: ${TransactionFee:F2}");
+}
 }

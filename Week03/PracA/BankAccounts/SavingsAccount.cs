@@ -13,4 +13,9 @@ public class SavingsAccount : BankAccount
         decimal interest = Balance * InterestRate;
         Balance += interest;
     }
+    public override void DisplayAccountInfo()
+{
+    base.DisplayAccountInfo();
+    Console.WriteLine($"Interest rate: {InterestRate * 100:0.0}%");
+}
 }
