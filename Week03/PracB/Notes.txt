@@ -6,3 +6,13 @@ in the same List<Employee> because both classes inherit from Employee.
 When CalculatePay() is called, C# uses the overridden method of the
 actual object type. Therefore, both objects can be treated as Employee
 objects but still produce different pay calculations.
+
+Task 4 - Reflection
+
+Polymorphism allows different derived classes to be treated as the same base class while still using their own behaviour. 
+In this task, FullTimeEmployee and Contractor can both be treated as Employee objects, but each class uses its own CalculatePay() method.
+
+Inheritance allows classes to share common properties and methods from a parent class, while polymorphism allows the same method call to produce different results depending on the actual object type.
+
+This is similar to Python because Python also allows different objects to respond differently to the same method call. However, 
+C# uses a stricter type system and commonly uses abstract or virtual methods with override. Python is more dynamic and can use duck typing.
