@@ -1,0 +1,8 @@
+Task 2 - Polymorphism
+
+Polymorphism allows FullTimeEmployee and Contractor objects to be stored
+in the same List<Employee> because both classes inherit from Employee.
+
+When CalculatePay() is called, C# uses the overridden method of the
+actual object type. Therefore, both objects can be treated as Employee
+objects but still produce different pay calculations.

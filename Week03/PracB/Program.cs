@@ -1,23 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main()
     {
-        FullTimeEmployee fullTime =
-            new FullTimeEmployee("Bill", 5000m);
+        List<Employee> employees = new List<Employee>
+        {
+            new FullTimeEmployee("Bill", 6250m),
+            new Contractor("Fred", 50m, 50m)
+        };
 
-        Contractor contractor =
-            new Contractor("Fred", 50m, 40m);
+        foreach (Employee employee in employees)
+        {
+            decimal pay = employee.CalculatePay();
+            decimal tax = pay * Employee.TaxRate;
 
-        Console.WriteLine("Full-Time Employee");
-        Console.WriteLine(fullTime.GenerateReport());
-        Console.WriteLine($"CalculatePay(): ${fullTime.CalculatePay():F2}");
-
-        Console.WriteLine();
-
-        Console.WriteLine("Contractor");
-        Console.WriteLine(contractor.GenerateReport());
-        Console.WriteLine($"CalculatePay(): ${contractor.CalculatePay():F2}");
+            Console.WriteLine(
+                $"{employee.Name}: Pay ${pay}. Tax ${tax}."
+            );
+        }
     }
 }
